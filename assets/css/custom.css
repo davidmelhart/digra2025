@@ -1,0 +1,55 @@
+#logo {
+    max-width: 250px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+#header h1, #header h2 {
+    margin: 0;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content video {
+    max-width: 50%;
+}
+
+@media screen and (max-width: 980px) {
+    html, body {
+        height: unset;
+        min-height: 100vh;
+    }
+    #header {
+        text-align: right;
+        width: 100%;
+    }
+    .content video {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content {
+        align-items: flex-start;
+    }
+
+    #header {
+        text-align: center;
+    }
+}
